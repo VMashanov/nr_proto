@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: Add autofollow
+      lineinfile:
+        dest: "/home/vagrant/.bashrc"
+        regexp: "^cd ~/{{ project_name }}"
+        line: "cd ~/{{ project_name }}"
+
+  roles:
+    - role: ruby-brightbox
+    - role: apt

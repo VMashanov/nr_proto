@@ -1,0 +1,15 @@
+---
+project_name: 'rg_proto'
+
+# packages
+apt_packages:
+  - build-essential
+  - curl
+  - wget
+  - ruby2.5-dev
+  - vim
+  - nginx
+
+# ruby version with brightbox`s path
+ruby_version: 2.5
+ruby_brightbox_bundler_version: 1.17.3

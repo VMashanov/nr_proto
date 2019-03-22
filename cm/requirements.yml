@@ -1,0 +1,7 @@
+# apt
+- src: https://github.com/vterdunov/ansible-apt
+  name: apt
+
+# ruby brightbox
+- src: https://github.com/vterdunov/ansible-ruby-brightbox
+  name: ruby-brightbox
