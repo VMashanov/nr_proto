@@ -1,5 +1,5 @@
 ---
-project_name: 'rg_proto'
+project_name: 'nr_proto'
 
 # packages
 apt_packages:

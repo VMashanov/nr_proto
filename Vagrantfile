@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
   guest_port = 8080
   host_port = 8080
   dev_ip = '192.168.33.35'
-  project_name='rg_proto'
+  project_name='nr_proto'
 
   config.vm.provider 'virtualbox' do |v|
     v.memory = ram
