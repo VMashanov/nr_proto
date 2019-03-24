@@ -2,7 +2,7 @@
 
 require 'json'
 
-module RGProto
+module NRProto
 
   MIME_JSON = { 'Content-Type' => 'application/json' }
   MIME_TEXT = { 'Content-Type' => 'text/plain' }

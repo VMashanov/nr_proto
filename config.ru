@@ -2,4 +2,4 @@
 
 require './app'
 
-run RGProto::App
+run NRProto::App

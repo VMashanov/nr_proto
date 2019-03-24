@@ -8,26 +8,25 @@ Prototype of separating requests between nginx and rack app
 
 ```
 server {
-        listen 192.168.33.35:80;
+  listen 192.168.33.35:80;
 
-        root /home/vagrant/nr_proto/public;
-        index index.html;
+  root /home/vagrant/nr_proto/public;
 
-        server_name nr_proto.ru;
+  server_name nr_proto.ru;
 
-        location ~ ^(.+)$ {
-                root /home/vagrant/nr_proto/public/;
-                index index.html;
-        }
+  location =/auth {
+    try_files $uri /auth.html;
+  }
 
-        location /auth {
-                index auth.html;
-        }
+  location /api/ {
+    proxy_pass http://192.168.33.35:8080;
+  }
 
-        location /api/ {
-                proxy_pass http://192.168.33.35:8080;
-        }
+  location ~ ^((?!\/api).+)$ {
+    try_files $uri /index.html;
+  }
 }
 ```
-3. Restar `nginx` with command `sudo systemctl restart nginx`
-4. Open some browser and forward by application url, in our case it is `192.168.33.35`
+3. Execute `sudo ln -s /etc/nginx/sites-available/nr_proto.ru /etc/nginx/sites-enabled/`
+4. Restar `nginx` with command `sudo systemctl restart nginx`
+5. Open some browser and forward by application url, in our case it is `192.168.33.35`
