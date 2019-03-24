@@ -31,4 +31,5 @@ server {
 ```
 3. Execute `sudo ln -s /etc/nginx/sites-available/nr_proto.ru /etc/nginx/sites-enabled/`
 4. Restart `nginx` with command `sudo systemctl restart nginx`
-5. Open some browser and forward by application url, in our case it is `192.168.33.35`
+5. Execute `make run`
+6. Open some browser and forward by application url, in our case it is `192.168.33.35`
