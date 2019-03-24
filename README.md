@@ -1,5 +1,7 @@
 # nr_proto
-Prototype of separating requests between nginx and rack app
+
+Prototype of separating requests between nginx and rack app.
+Example of case when frontend returns by nginx server but rack app is handling another requests.
 
 ## Steps
 
